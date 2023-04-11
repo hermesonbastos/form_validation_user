@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>Teste validação</title>
+</head>
+<body>
+    <div class="formulario">
+        <h2 class="form_title">
+            Inscreva-se
+        </h2>
+        <form>
+            <div class="form_input">
+                <input type="text"
+                       name="nome"
+                       pattern="/^[A-Za-zÀ-ÖØ-öø-ÿ]+([ ]?[A-Za-zÀ-ÖØ-öø-ÿ]+)*$/"
+                       onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Nome completo'"
+                       placeholder="Nome completo"
+                       oninput="not_numbers(this)"
+                       required>
+            </div>
+            <div class="form_input">
+                <input type="email"
+                       name="email"
+                       onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Email'"
+                       placeholder="Email" required>
+            </div>
+            <div class="form_input">
+                <input type="number"
+                       name="mat"
+                       pattern="\d{6}"
+                       onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Matrícula'"
+                       placeholder="Matrícula"
+                       maxlength="6"
+                       required>
+            </div>
+            <div class="form_input form_checkbox">
+                <label for="curso">Curso:</label><br>
+                <input type="checkbox" id="cc" name="curso" value="Ciência da Computação" onchange="uncheckOthers(this)">
+                <label for="cc">Ciência da Computação</label><br>
+                <input type="checkbox" id="dd" name="curso" value="Design Digital" onchange="uncheckOthers(this)">
+                <label for="dd">Design Digital</label><br>
+                <input type="checkbox" id="ec" name="curso" value="Engenharia da Computação" onchange="uncheckOthers(this)">
+                <label for="ec">Engenharia da Computação</label><br>
+                <input type="checkbox" id="es" name="curso" value="Engenharia de Software" onchange="uncheckOthers(this)">
+                <label for="es">Engenharia de Software</label><br>
+                <input type="checkbox" id="rc" name="curso" value="Redes de Computadores" onchange="uncheckOthers(this)">
+                <label for="rc">Redes de Computadores</label><br>
+                <input type="checkbox" id="si" name="curso" value="Sistemas de Informação" onchange="uncheckOthers(this)">
+                <label for="si">Sistemas de Informação</label><br>
+            </div>
+        </form>
+        <button class="form_button" type="submit" onclick="generateJSON()">Enviar</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

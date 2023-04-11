@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .form_title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #EA4C89;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form_input {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .form_input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form_checkbox input[type="checkbox"] {
+    display: inline-block; /* deixa o texto em linha */
+    margin-bottom: 7px; /* adiciona uma margem abaixo do texto */
+  }
+  
+  .form_input input[type="text"],
+  .form_input input[type="email"],
+  .form_input input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  .form_checkbox {
+    margin-top: 10px;
+  }
+  
+  .form_checkbox input[type="checkbox"],
+  .form_checkbox label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .form_checkbox label {
+    font-weight: normal;
+    color: #333333;
+  }
+  
+  .form_checkbox input[type="checkbox"]:checked + label {
+    color: #EA4C89;
+    font-weight: bold;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #EA4C89;
+  }
+  
+  input:invalid {
+    border-color: #FF4136;
+  }
+  
+  input:valid {
+    border-color: #2ECC40;
+  }
+  
+  input:required {
+    border-color: #333333;
+  }
+  
+  button[type="submit"] {
+    align-self: center;
+    background-color: #EA4C89;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #D1497B;
+  }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+display: none;
+}
